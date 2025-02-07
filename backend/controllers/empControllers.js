@@ -21,28 +21,28 @@ const empSearch=async(req, res)=>{
     res.send(Data);
   }
   
-//   const empDelete=async(req,res)=>{
-//  const{empid}=req.query;
-//  await empModel.findByIdAndDelete(empid);
-//  res.send("data deleted")
-//   }
+  const empDelete=async(req,res)=>{
+ const{empid}=req.query;
+ await empModel.findByIdAndDelete(empid);
+ res.send("data deleted")
+  }
 
-//   const empEditshow=async(req,res)=>{
-//     const{empid}=req.body;
-//     const Data =await empModel.findById(empid);
-//     res.send(Data)
-//   }
+  const empEditshow=async(req,res)=>{
+    const{empid}=req.body;
+    const Data =await empModel.findById(empid);
+    res.send(Data)
+  }
 
-//   const empEditSave=async(req,res)=>{
-//     const{_id}=req.body;
-//     await empModel.findByIdAndUpdate(_id,req.body);
-//   }
+  const empEditSave=async(req,res)=>{
+    const{_id}=req.body;
+    await empModel.findByIdAndUpdate(_id,req.body);
+  }
 
 module.exports={
     dataSave,
     Display,
     empSearch,
-    // empDelete,
-    // empEditshow,
-    // empEditSave
+    empDelete,
+    empEditshow,
+    empEditSave
 }
